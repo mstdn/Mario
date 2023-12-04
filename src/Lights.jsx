@@ -1,7 +1,6 @@
-import { Sky, Environment, Stars, Clouds, Cloud, ContactShadows } from '@react-three/drei'
+import { Sky, Environment, Clouds, Cloud, ContactShadows } from '@react-three/drei'
 import { useFrame } from '@react-three/fiber'
 import { useRef } from 'react'
-import * as THREE from 'three'
 
 export default function Lights(props)
 {
@@ -45,7 +44,7 @@ export default function Lights(props)
     return <>
         { !downgradedPerformance && (
         <>
-            <Clouds position={ [ 0, 30, 0 ] } material={ THREE.MeshBasicMaterial }>
+            {/* <Clouds position={ [ 0, 30, 0 ] } material={ THREE.MeshBasicMaterial }>
                 <Cloud 
                     segments={ 50 } 
                     bounds={ [ 1000, 1000, 1000 ] } 
@@ -59,7 +58,7 @@ export default function Lights(props)
                     color="white" 
                     fade={ 10 } 
                 />
-            </Clouds>
+            </Clouds> */}
             <ContactShadows />
         </>
         )}

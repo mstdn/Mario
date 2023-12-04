@@ -15,12 +15,10 @@ const Coin = (props) =>
     const increaseCoins = useGame(state => state.increaseCoins)
     const { nodes, materials } = useGLTF("./assets/models/coin.glb")
 
-    useFrame((state) =>
+    useFrame((state, delta) =>
     {
-        // Get time
-        const time = state.clock.getElapsedTime()
         // Item rotate
-        coin.current.rotation.y += time * 0.0002
+        coin.current.rotation.y += delta * 0.5
 
         if(char.current)
         {
@@ -63,7 +61,7 @@ const Coin = (props) =>
 
 export function totalCoinAmount()
 {
-    return totalCoinAmount = 11
+    return totalCoinAmount = 30
 }
 
 export default function Collectables(props)
@@ -80,94 +78,267 @@ export default function Collectables(props)
     const coin9  = useRef()
     const coin10  = useRef()
     const coin11  = useRef()
-    // const coin12  = useRef()
-    // const coin13  = useRef()
+    const coin12  = useRef()
+    const coin13  = useRef()
+    const coin14  = useRef()
+    const coin15  = useRef()
+    const coin16  = useRef()
+    const coin17  = useRef()
+    const coin18  = useRef()
+    const coin19  = useRef()
+    const coin20  = useRef()
+    const coin21  = useRef()
+    const coin22  = useRef()
+    const coin23  = useRef()
+    const coin24  = useRef()
+    const coin25  = useRef()
+    const coin26  = useRef()
+    const coin27  = useRef()
+    const coin28  = useRef()
+    const coin29  = useRef()
+    const coin30  = useRef()
 
     return(
     <>
-        <Coin 
-            coin={ coin1 }
-            position={ [ 0.1, 7, 19.7 ] }
-            dis={ DIST }
-            scale={ SCALE }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin2 } 
-            position={ [ 50.25, 8, 4.2 ] } 
-            dis={ DIST }
-            scale={ SCALE }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin3 } 
-            position={ [ 64.73, 12, 50 ] } 
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin4 } 
-            position={ [ 79.5, 14, 50 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin5 } 
-            position={ [ 79.5, 16, 35 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin6 } 
-            position={ [ 79.5, 18, 20 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin7 } 
-            position={ [ 79.5, 20.5, 5 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin8 } 
-            position={ [ 65, 22, 5 ] }
-            dis={ DIST }
-            scale={ SCALE }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin9 } 
-            position={ [ 65, 25, 20 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin10 } 
-            position={ [ 65, 28, 35 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
-        <Coin 
-            coin={ coin11 } 
-            position={ [ 65, 31, 50 ] }
-            dis={ DIST }
-            char={ char }
-            col={ false }
-        />
+        {/* Left side start */}
+        <group>
+            <Coin 
+                coin={ coin1 }
+                position={ [ 0.1, 7, 19.7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin2 } 
+                position={ [ 50.25, 8, 4.2 ] } 
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin3 } 
+                position={ [ 64.73, 12, 50 ] } 
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin4 } 
+                position={ [ 79.5, 14, 50 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin5 } 
+                position={ [ 79.5, 16, 35 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin6 } 
+                position={ [ 79.5, 18, 20 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin7 } 
+                position={ [ 79.5, 20.5, 5 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin8 } 
+                position={ [ 65, 22, 5 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin9 } 
+                position={ [ 65, 25, 20 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin10 } 
+                position={ [ 65, 28, 35 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin11 } 
+                position={ [ 65, 31, 50 ] }
+                dis={ DIST }
+                char={ char }
+                col={ false }
+            />
+        </group>
 
-        {/* <Coin position={ [ - 802, 42, - 126 ] } pos={ [ - 802, 42, - 126 ] } scale={ SCALE }char={ char } coin={ coin12 } /> */}
-        {/* <Coin position={ [ - 820, 56, - 152 ] } pos={ [ - 820, 56, - 152 ] } scale={ SCALE }char={ char } coin={ coin13 } /> */}
+        {/* Right side Start */}
+        <group>
+            <Coin 
+                coin={ coin12 }
+                position={ [ - 88, 14, 33 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin13 }
+                position={ [ - 93, 17, 33 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin14 }
+                position={ [ - 98, 20, 33 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin15 }
+                position={ [ - 103, 23, 33 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin16 }
+                position={ [ - 108, 26, 33 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin17 }
+                position={ [ - 108, 29, 27 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin18 }
+                position={ [ - 108, 32, 22 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin19 }
+                position={ [ - 108, 35, 17 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin20 }
+                position={ [ - 108, 38, 12 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin21 }
+                position={ [ - 108, 41, 7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin22 }
+                position={ [ - 103, 41, 7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin23 }
+                position={ [ - 98, 41, 7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin24 }
+                position={ [ - 93, 41, 7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin25 }
+                position={ [ - 88, 41, 7 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin26 }
+                position={ [ - 88, 41, 12 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin27 }
+                position={ [ - 88, 41, 17 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin28 }
+                position={ [ - 88, 41, 22 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin29 }
+                position={ [ - 93, 41, 22 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+            <Coin 
+                coin={ coin30 }
+                position={ [ - 98, 41, 22 ] }
+                dis={ DIST }
+                scale={ SCALE }
+                char={ char }
+                col={ false }
+            />
+        </group>
     </>
     )
 }

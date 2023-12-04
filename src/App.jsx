@@ -90,7 +90,7 @@ export default function App()
             >
                     <fog attach="fog" args={["#87CEEB", 10, 600]} />
                     <Physics
-                        // debug
+                        //debug
                         timeStep="vary"
                         // paused={ paused }
                         // gravity={ [ 0, - 9.81, 0 ] }
@@ -115,7 +115,7 @@ export default function App()
                 { isDesktop && started && (
                     <>
                         <PointerLockControls />
-                        <Perf position="top-left" />
+                        {/* <Perf position="top-left" /> */}
                     </>
                 )}
             </Canvas>
