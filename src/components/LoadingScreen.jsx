@@ -40,12 +40,12 @@ export const LoadingScreen = (props) =>
               setShowLoading(false)
             }}
             style={{
-              border: "2px dotted #ffffff",
+              border: "2px solid #ffffff",
               borderRadius: "25px",
               padding: "20px"
             }}
           >
-            Platformer
+            Not Mario
           </button>
         )}
       { progress !== 100 && (

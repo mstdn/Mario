@@ -47,13 +47,13 @@ const Player = forwardRef((props, ref) =>
                 capsuleRadius={ 0.3 }
                 capsuleHalfHeight={ 0.5 }
                 friction={ 1 }
-                camInitDis={ - 18 }
+                camInitDis={ - 10 }
                 camMaxDis={ - 30 }
                 camMinDis={ - 0.1 }
                 animated={ true }
                 position={ [ 0, 20, 0 ] }
                 maxVelLimit={ 3 }
-                sprintMult={ 3 }
+                sprintMult={ 4 }
                 jumpVel={ 8 }
                 autoBalanceDampingOnY={ 0.01 }
                 slopeMaxAngle={ 2 }
