@@ -1,7 +1,7 @@
 import { forwardRef } from 'react'
 import { useFrame } from '@react-three/fiber'
 import Ecctrl, { EcctrlAnimation } from 'ecctrl'
-import { Walugi } from './Walugi'
+import { Mario } from './Mario'
 
 const Player = forwardRef((props, ref) =>
 {
@@ -22,7 +22,7 @@ const Player = forwardRef((props, ref) =>
         }
     })
     
-    const characterURL = "./assets/models/walugi.glb"
+    const characterURL = "./assets/models/mario.glb"
     const animationSet = 
     {
         idle: "Idle",
@@ -67,7 +67,7 @@ const Player = forwardRef((props, ref) =>
                     characterURL={ characterURL }
                     animationSet={ animationSet }
                 >
-                    <Walugi
+                    <Mario
                         position={ [ 0,  - 1, 0 ] }
                     />
                 </EcctrlAnimation>

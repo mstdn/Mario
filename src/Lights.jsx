@@ -43,9 +43,9 @@ export default function Lights(props)
     })
 
     return <>
-        {/* { !downgradedPerformance && (
+        { !downgradedPerformance && (
         <>
-            <Clouds position={ [ 0, 20, 0 ] } material={ THREE.MeshBasicMaterial }>
+            <Clouds position={ [ 0, 30, 0 ] } material={ THREE.MeshBasicMaterial }>
                 <Cloud 
                     segments={ 50 } 
                     bounds={ [ 1000, 1000, 1000 ] } 
@@ -62,7 +62,7 @@ export default function Lights(props)
             </Clouds>
             <ContactShadows />
         </>
-        )} */}
+        )}
         <Environment
             // preset='sunset' 
             // files="./assets/images/map.hdr"

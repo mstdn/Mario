@@ -27,7 +27,7 @@ export const LoadingScreen = (props) =>
           className={`
               fixed top-0 left-0 w-full h-full z-50 transition-opacity 
               duration-1000
-              flex items-center justify-center bg-[#7b00ff] 
+              flex items-center justify-center bg-[#E4000F] 
               ${started ? "opacity-0" : "opacity-100"}
           `}
       >
